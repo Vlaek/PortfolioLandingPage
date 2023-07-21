@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+:root {
+    --blue: #3e8fa0;
+    --purple: #818ba4;
+    --gray: #333;
+    --dark-gray: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--blue);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__link {
+    display: block;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+.nav__link:hover {
+    background: var(--purple);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.section-gray {
+    background: var(--gray);
+}
+
+.section-purple {
+    background: var(--purple);
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold;
+}
+
+.main-section__title {
+    font-size: 72px;
+}
+
+.main-section__text {
+    font-size: 26px;
+    color: var(--blue);
+
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.main-section__text._active { 
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+
+/* Sections */
+
+.section-title {
+    font-size: 42px;
+    text-align: center;
+    padding: 100px 0 35px;
+}
+.section-title::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 2px;
+    margin: 5px auto 30px;
+    background-color: #fff;
+}
+
+.cards__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-gap: 50px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.cards__item {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(0);
+    transition: all 0.8s ease 0s;
+    margin: 0 auto;
+    width: 100%;
+}
+.cards__item._active {
+    transform: scale(1);
+}
+.cards__item._active:hover {
+    transform: scale(1.05);
+}
+.cards__item._round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    background-color: var(--dark-gray);
+    font-size: 28px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.cards__code {
+    color: transparent;
+    transition: color 0.2s linear 0.2s;
+}
+.cards__item:hover .cards__code {
+    color: red;
+}
+
+.cards__title {
+    text-align: center;
+    padding: 25px 0;
+    background-color: var(--gray);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.cards__title-purple {
+    background-color: var(--purple);
+}
+
+.cards__text {
+    background-color: var(--dark-gray);
+    padding: 20px;
+    font-size: 18px;
+    height: 200px;
+    overflow: hidden;
+    line-height: 1.2;
+}
+.cards__text p {
+    margin-bottom: 12px;
+}
+
+.cards__img {
+    height: 340px;
+    background-color: var(--dark-gray);
+}
+
+.cards__img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* Contacts */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+}
+
+.contact__title {
+    font-size: 84px;
+    display: block;
+}
+
+.contact__links {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    transform: scale(0);
+    margin-right: 50px;
+}
+.contact__item._active:hover {
+    transform: translate(0, 15px);
+    color: var(--purple);
+}
+.contact__item._active {
+    transform: scale(1);
+}
+
+.contact__item i {
+    margin-right: 15px;
+}
+
+
+/* Animation */
+
+._anim-show {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+._anim-show._active,
+._active ._anim-show {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
