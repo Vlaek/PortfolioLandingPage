@@ -30,7 +30,6 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
     background: var(--blue);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 100;
@@ -141,6 +140,13 @@ ul {
 .cards__item._active:hover {
     transform: scale(1.05);
 }
+
+.cards__item--round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cards__item._round {
     display: flex;
     justify-content: center;
@@ -182,7 +188,7 @@ ul {
     background-color: var(--dark-gray);
     padding: 20px;
     font-size: 18px;
-    height: 250px;
+    height: 275px;
     overflow: hidden;
     line-height: 1.2;
 }
@@ -206,10 +212,10 @@ ul {
 
 .contact-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: calc(100vh - 60px);
+    height: 100vh;
 }
 
 .contact__title {
@@ -272,10 +278,6 @@ ul {
         max-width: 920px;
     }
 
-    .section {
-        min-height: calc(100vh - 50px);
-    }
-
     .section__content {
         padding: 50px 0;
     }
@@ -328,10 +330,6 @@ ul {
 @media (max-width: 1000px) {
     .container {
         max-width: 680px;
-    }
-
-    .section {
-        min-height: calc(100vh - 30px);
     }
 
     .section__content {
@@ -401,10 +399,6 @@ ul {
         font-size: 18px;
     }
 
-    .nav {
-        height: 50px;
-    }
-
     .nav__link {
         font-size: 18px;
     }
@@ -426,10 +420,6 @@ ul {
 
     .cards__img {
         height: 170px;
-    }
-
-    .contact-section {
-        height: calc(100vh - 50px);
     }
 
     .contact__title {
@@ -456,15 +446,6 @@ ul {
 
     .main-section__text {
         font-size: 16px;
-    }
-
-    .nav {
-        height: 40px;
-    }
-
-    .nav__link {
-        font-size: 14px;
-        padding: 12px;
     }
 
     .section-title {
@@ -506,10 +487,6 @@ ul {
     .contact__item {
         font-size: 14px;
     }
-
-    .contact-section {
-        height: calc(100vh - 40px);
-    }
 }
 
 @media (max-width: 420px) {
@@ -525,12 +502,8 @@ ul {
         font-size: 16px;
     }
 
-    .nav {
-        height: 30px;
-    }
-
     .nav__link {
-        font-size: 10px;
+        font-size: 17px;
         padding: 9px;
     }
 

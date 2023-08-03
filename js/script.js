@@ -41,7 +41,7 @@ $('.scrollto a').on('click', function() {
     let href = $(this).attr('href');
 
     $('html, body').animate({
-        scrollTop: $(href).offset().top - 60
+        scrollTop: $(href).offset().top - 30
     }, {
         duration: 370,
         easing: "linear"
