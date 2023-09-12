@@ -1,7 +1,7 @@
 {
 	"name": "portfolio-react",
 	"private": true,
-	"homepage": "https://github.com/Vlaek.github.io/PortfolioLandingPage",
+	"homepage": "https://vlaek.github.io/PortfolioLandingPage/",
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
