@@ -41,6 +41,11 @@ export const projects = [
 		href: 'https://vlaek.github.io/MusicStore-React/',
 	},
 	{
+		title: 'Soundboard [React]',
+		img: 'project7.jpg',
+		href: 'https://vlaek.github.io/Soundboard-React/',
+	},
+	{
 		title: 'GKeep-Lite [React]',
 		img: 'project6.jpg',
 		href: 'https://vlaek.github.io/GKeep-Lite-React/',
@@ -62,7 +67,7 @@ export const projects = [
 	},
 	{
 		title: 'Donatik [Lua]',
-		img: 'project4.jpg',
+		img: 'project4.png',
 		href: 'https://vlaek.github.io/Donatik/',
 	},
 ]
