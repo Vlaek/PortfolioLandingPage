@@ -47,22 +47,22 @@ export const projects = [
 	},
 	{
 		title: 'GKeep-Lite [React]',
-		img: 'project6.jpg',
+		img: 'project6.png',
 		href: 'https://vlaek.github.io/GKeep-Lite-React/',
 	},
 	{
 		title: 'ToDo [React]',
-		img: 'project1.jpg',
+		img: 'project1.png',
 		href: 'https://vlaek.github.io/ToDo-React/',
 	},
 	{
 		title: 'ToDo [Flask]',
-		img: 'project2.jpg',
+		img: 'project2.png',
 		href: 'https://github.com/Vlaek/ToDo-Flask',
 	},
 	{
 		title: 'Project Organisation',
-		img: 'project3.jpg',
+		img: 'project3.png',
 		href: 'https://github.com/Vlaek/Project-Organization-Flask',
 	},
 	{
