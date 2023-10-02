@@ -56,6 +56,11 @@ export const projects = [
 		href: 'https://vlaek.github.io/ToDo-React/',
 	},
 	{
+		title: 'SurveyForm [React]',
+		img: 'project8.png',
+		href: 'https://vlaek.github.io/SurveyForm-React/',
+	},
+	{
 		title: 'ToDo [Flask]',
 		img: 'project2.png',
 		href: 'https://github.com/Vlaek/ToDo-Flask',
@@ -94,7 +99,13 @@ export const about = [
 	},
 	{
 		title: 'Хобби',
-		text: ['Спорт', 'Путешествия', 'Изучение языков:', '- Немецкий - B1', '- Английский'],
+		text: [
+			'Спорт',
+			'Путешествия',
+			'Изучение языков:',
+			'- Немецкий - B1',
+			'- Английский',
+		],
 	},
 	{
 		title: 'Развлечения',
