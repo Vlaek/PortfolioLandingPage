@@ -15,6 +15,9 @@ export const skills = [
 		title: 'React',
 	},
 	{
+		title: 'Redux',
+	},
+	{
 		title: 'TypeScript',
 	},
 	{
@@ -59,6 +62,11 @@ export const projects = [
 		title: 'SurveyForm [React]',
 		img: 'project8.png',
 		href: 'https://vlaek.github.io/SurveyForm-React/',
+	},
+	{
+		title: 'ProductShowcase [React]',
+		img: 'project9.png',
+		href: 'https://vlaek.github.io/ProductShowcase-React/',
 	},
 	{
 		title: 'ToDo [Flask]',
