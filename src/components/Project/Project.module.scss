@@ -85,3 +85,9 @@
 		height: 30px;
 	}
 }
+
+@media (max-width: 420px) {
+	.title {
+		font-size: 10px;
+	}
+}
