@@ -64,7 +64,7 @@ export const projects = [
 		href: 'https://vlaek.github.io/SurveyForm-React/',
 	},
 	{
-		title: 'ProductShowcase [React]',
+		title: 'OnlineStore [React]',
 		img: 'project9.png',
 		href: 'https://vlaek.github.io/ProductShowcase-React/',
 	},
@@ -74,7 +74,7 @@ export const projects = [
 		href: 'https://github.com/Vlaek/ToDo-Flask',
 	},
 	{
-		title: 'Project Organisation',
+		title: 'DB [Flask]',
 		img: 'project3.png',
 		href: 'https://github.com/Vlaek/Project-Organization-Flask',
 	},

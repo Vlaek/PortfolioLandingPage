@@ -9,7 +9,6 @@ const Nav: FC = () => {
 				<li className={styles.item}>
 					<Link
 						activeClass={styles.active}
-						offset={-15}
 						to='skills'
 						spy={true}
 						smooth={true}
@@ -21,7 +20,6 @@ const Nav: FC = () => {
 				<li className={styles.item}>
 					<Link
 						activeClass={styles.active}
-						offset={-15}
 						to='works'
 						spy={true}
 						smooth={true}
@@ -33,7 +31,6 @@ const Nav: FC = () => {
 				<li className={styles.item}>
 					<Link
 						activeClass={styles.active}
-						offset={-15}
 						to='about'
 						spy={true}
 						smooth={true}
@@ -45,7 +42,6 @@ const Nav: FC = () => {
 				<li className={styles.item}>
 					<Link
 						activeClass={styles.active}
-						offset={-15}
 						to='contacts'
 						spy={true}
 						smooth={true}
