@@ -54,14 +54,19 @@ export const projects = [
 		href: 'https://vlaek.github.io/GKeep-Lite-React/',
 	},
 	{
-		title: 'ToDo [React]',
-		img: 'project1.png',
-		href: 'https://vlaek.github.io/ToDo-React/',
-	},
-	{
 		title: 'SurveyForm [React]',
 		img: 'project8.png',
 		href: 'https://vlaek.github.io/SurveyForm-React/',
+	},
+	{
+		title: 'Worms3D [React]',
+		img: 'project10.png',
+		href: 'https://vlaek.github.io/Worms3D-React/',
+	},
+	{
+		title: 'ToDo [React]',
+		img: 'project1.png',
+		href: 'https://vlaek.github.io/ToDo-React/',
 	},
 	{
 		title: 'OnlineStore [React]',
