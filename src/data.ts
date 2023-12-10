@@ -64,6 +64,11 @@ export const projects = [
 		href: 'https://vlaek.github.io/Worms3D-React/',
 	},
 	{
+		title: 'CookBookHub [React]',
+		img: 'project11.png',
+		href: 'https://vlaek.github.io/CookBookHub/',
+	},
+	{
 		title: 'ToDo [React]',
 		img: 'project1.png',
 		href: 'https://vlaek.github.io/ToDo-React/',
