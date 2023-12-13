@@ -9,3 +9,7 @@
 - React Intersection Observer
 - React Scroll
 - gh-pages
+
+Иллюстрации:
+
+![Главная страница]([https://imgur.com/uhkRPLh 'Главная страница')
