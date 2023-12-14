@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer'
 import { IProjectProps } from './project.interface'
 import styles from './Project.module.scss'
 
-const Project: FC<IProjectProps> = ({ project }) => {
+const Project: FC<IProjectProps> = ({ project, openModal }) => {
 	const [isAnimated, setIsAnimated] = useState(false)
 	const [ref, inView] = useInView({ threshold: 0.5 })
 
@@ -17,8 +17,9 @@ const Project: FC<IProjectProps> = ({ project }) => {
 		<a
 			className={`${styles.item} ${isAnimated ? styles.anim : ''}`}
 			ref={ref}
-			href={project.href}
+			// href={project.href}
 			target='_blank'
+			onClick={() => openModal(project)}
 		>
 			<div className={styles.title}>
 				<p>
