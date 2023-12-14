@@ -14,11 +14,9 @@ const Project: FC<IProjectProps> = ({ project, openModal }) => {
 	}, [inView])
 
 	return (
-		<a
+		<div
 			className={`${styles.item} ${isAnimated ? styles.anim : ''}`}
 			ref={ref}
-			// href={project.href}
-			target='_blank'
 			onClick={() => openModal(project)}
 		>
 			<div className={styles.title}>
@@ -31,7 +29,7 @@ const Project: FC<IProjectProps> = ({ project, openModal }) => {
 			<div className={styles.img}>
 				<img src={`./img/${project.img}`} alt={project.title} />
 			</div>
-		</a>
+		</div>
 	)
 }
 

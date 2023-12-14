@@ -7,6 +7,8 @@
 	transform: scale(0);
 	transition: all 0.8s ease 0s;
 
+	cursor: pointer;
+
 	&.anim:hover {
 		transform: scale(1.05);
 	}
