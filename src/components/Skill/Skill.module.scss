@@ -37,6 +37,11 @@
 	user-select: none;
 }
 
+.extra {
+	border: 5px dashed #eee;
+	cursor: pointer;
+}
+
 .code {
 	color: transparent;
 	transition: color 0.2s linear 0.2s;
