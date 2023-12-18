@@ -106,6 +106,7 @@ export const projects = [
 			'https://camo.githubusercontent.com/53fdc80ef369cfe2ecffd617659668b0fc63c565141d462f77307df83145d026/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f4f616431494266595a724f62745873704f6a2f67697068792e676966',
 			'https://camo.githubusercontent.com/34113058a31c9c3cb2cee687123ced5c659938a649702dad7ff5bd5297652ad6/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f4e7636534c41714832764139356b5349495a2f67697068792e676966',
 		],
+		mobile: true,
 	},
 	{
 		title: 'Soundboard',
@@ -127,6 +128,7 @@ export const projects = [
 			'https://camo.githubusercontent.com/b6f22224080dad71a24e41bd56993d34512837e903f6d1f52a6572fc3e1fbdd8/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f746f31726e593876526d4b6450726571694f2f67697068792e676966',
 			'https://camo.githubusercontent.com/25cd560bd3e36159b2fac9c063ba8611db8b979d8f73902c1ab61f43bbf5a985/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53486459707157415a61306b53415a78716f2f67697068792e676966',
 		],
+		mobile: true,
 	},
 	{
 		title: 'CookBookHub',
@@ -150,6 +152,7 @@ export const projects = [
 			'https://camo.githubusercontent.com/817358f49514c5398111fb8d1efd71122b5936f6493c611afedd9feca5b0b5e7/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f7151474c6b6f53676d32436c4c77683258412f67697068792e676966',
 			'https://camo.githubusercontent.com/bd89fb067accc5ef5c81296bdf32d1d2ff6098e8beced981455bdac0d170aa66/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f57506e706a4a4a4f5778503573726b796a702f67697068792e676966',
 		],
+		mobile: true,
 	},
 	{
 		title: 'GKeep-Lite',
@@ -167,6 +170,7 @@ export const projects = [
 		screens: [
 			'https://camo.githubusercontent.com/c99cba7379154d18c67b1003f655e7a78a45fef19fe98b987b8b8b093f3aad21/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a45785a544e7261486c34635777784d6e6b794d475671616a67316347777a4e6a67325a3230794e3277304f5456744d474d304f5446334d435a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f52786a78634d6e676e617162565a637036682f67697068792e676966',
 		],
+		mobile: true,
 	},
 	{
 		title: 'Worms3D',
@@ -186,6 +190,7 @@ export const projects = [
 			'https://camo.githubusercontent.com/9a558fc81469e75640da5985e2816ff3dd9e682b75e59ae1db672348c6454749/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f7848467261756b584b74706a4173765674342f67697068792e676966',
 			'https://camo.githubusercontent.com/2e22c3ef1fa7652b7ac6891c558a516ec6c6d30ac61f805476683eb5fb7e8af1/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6f69304449514a584369515a637a5a6c694a2f67697068792e676966',
 		],
+		mobile: true,
 	},
 	{
 		title: 'SurveyForm',
@@ -204,6 +209,7 @@ export const projects = [
 		screens: [
 			'https://camo.githubusercontent.com/ba0a6b17efb4e313a8ca75065e66aefc80efddb806332ca5a03becf7d6e9b079/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a457863546b7963336c735a334a304e3341794d4770314d4746354e586f784e7a68704f544a704e6a68306257343363336477596d467564435a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f693146676433736353616a4d4958647a317a2f67697068792e676966',
 		],
+		mobile: true,
 	},
 	{
 		title: 'OnlineStore',
@@ -222,6 +228,28 @@ export const projects = [
 		screens: [
 			'https://camo.githubusercontent.com/84330140fc7731ec2d11330fac13577552b578716ebf48ba53ebe7bcd1a68d42/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a457861324e7962336475636a566e636a4a33626d77325a6e686c597a4a7a6133686a5a4468366148646f6458646e6147686c4e484d3065535a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f4975556d4b3150595144424137464d7171612f67697068792e676966',
 		],
+		mobile: false,
+	},
+	{
+		title: 'Ant Design',
+		img: 'project12.png',
+		href: 'https://vlaek.github.io/AntDesign/',
+		subtitle: 'React, Ant Design, TypeScript',
+		text: 'The goal of this project was to practice using ready-made components from Ant Design. Several pages were created, including a ToDo list with the ability to create task descriptions and due dates, an image gallery, an about us page with pagination, a team page, and a page showcasing other projects.',
+		github: 'https://github.com/Vlaek/AntDesign',
+		techs: [
+			'HTML, CSS, SASS, JavaScript, React, TypeScript',
+			'Ant Design',
+			'React Router',
+			'DayJS',
+		],
+		screens: [
+			'https://camo.githubusercontent.com/231c5366b426d3969d4c2c8ad707be4cd9f9a5a032d9be277fca83afc32843f6/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f443046794335745958396c4a714f7172586e2f67697068792e676966',
+			'https://camo.githubusercontent.com/2b1308498334731e5990ad80f5d929b6550677f473b974333cb8da2f71690bd6/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f64626251444d4f75454831537339764473372f67697068792e676966',
+			'https://camo.githubusercontent.com/1e23e5a68b8ba1fe5540e702fbda9c095d619348b5008016015b0c81521bbde0/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f784b596268494174457270394b734c4458782f67697068792e676966',
+			'https://camo.githubusercontent.com/44b966fbdacfab61381443eb7da9edada0a1a63a9dcb7be11dc9092d920eeac5/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f70524865754e3750683668373873395139722f67697068792e676966',
+		],
+		mobile: false,
 	},
 	{
 		title: 'ToDo',
@@ -243,11 +271,12 @@ export const projects = [
 			'https://camo.githubusercontent.com/bd37363ff63558fa6e03a61b349d9b3878f0eeaf1263d9d60060f64d5f1a280d/68747470733a2f2f692e696d6775722e636f6d2f416e574f7a547a2e676966',
 			'https://camo.githubusercontent.com/6a96702b970261fded4589976e846a9e06fb13ed4337a359477f4bc70717f087/68747470733a2f2f692e696d6775722e636f6d2f4e3150334179782e676966',
 		],
+		mobile: true,
 	},
 	{
 		title: 'ToDo Flask',
 		img: 'project2.png',
-		href: 'https://github.com/Vlaek/ToDo-Flask',
+		href: '',
 		subtitle: 'Python, Flask, SQLAlchemy',
 		text: 'ToDo is a pet project developed using Flask, Python, JS, HTML and CSS, and is a simple but effective task management system. It provides the user with a user-friendly interface for creating, viewing and editing a task list.',
 		github: 'https://github.com/Vlaek/ToDo-Flask',
@@ -259,11 +288,12 @@ export const projects = [
 			'https://camo.githubusercontent.com/3c45c5ec02cba6e152ec259d5be07fa5d34396a8e63ccee958ef4a0ff76147c3/68747470733a2f2f692e696d6775722e636f6d2f7936697154584d2e6a7067',
 			'https://camo.githubusercontent.com/4ac3a7bfaad54d4e4a403a8b7a49d377ee986a9c67a525a1b87665bea908ad3c/68747470733a2f2f692e696d6775722e636f6d2f59587974614a6a2e676966',
 		],
+		mobile: false,
 	},
 	{
 		title: 'DB Flask',
 		img: 'project3.png',
-		href: 'https://github.com/Vlaek/Project-Organization-Flask',
+		href: '',
 		subtitle: 'Python, Flask, PyMySQL',
 		text: 'DB is a graphical interface based on the Flask framework for the Project Organizations database. MySQL is used as a database. The PyMySQL module was selected to implement queries in the database.',
 		github: 'https://github.com/Vlaek/Project-Organization-Flask',
@@ -274,6 +304,7 @@ export const projects = [
 			'https://camo.githubusercontent.com/4121c43673e9235d9f8c1a0f082a82b67c2c01691b8f6873d3938f443d91ea46/68747470733a2f2f692e696d6775722e636f6d2f574a473841517a2e6a7067',
 			'https://camo.githubusercontent.com/88c647c59efe80c3311373e3a5ebd80317ef3931d09dabaf3508405fa75561f7/68747470733a2f2f692e696d6775722e636f6d2f4e6b754b5334492e6a7067',
 		],
+		mobile: false,
 	},
 	{
 		title: 'Donatik',
@@ -290,6 +321,7 @@ export const projects = [
 			'https://camo.githubusercontent.com/5d79eda75e06f516662f43494b23439dd15c008c4a93f1bc2370a9cdef932268/68747470733a2f2f692e696d6775722e636f6d2f595374386d35352e706e67',
 			'https://camo.githubusercontent.com/8fe4b0c50bfea1655bec67406cc13aeac74dab0cfb82b4c761af0adcc751db9d/68747470733a2f2f692e696d6775722e636f6d2f4939367a3258382e706e67',
 		],
+		mobile: true,
 	},
 ]
 

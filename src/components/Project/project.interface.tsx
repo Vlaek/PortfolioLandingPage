@@ -12,4 +12,5 @@ export interface IProject {
 	github: string
 	techs: string[]
 	screens: string[]
+	mobile: boolean
 }

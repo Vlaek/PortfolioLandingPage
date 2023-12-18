@@ -60,12 +60,19 @@ const ProjectModal: FC<ProjectModalProps> = ({
 								<div className={styles.text}>{project.text}</div>
 							</div>
 							<div className={styles.bottom}>
-								<a href={project.github} target='_blank'>
-									GitHub
-								</a>
-								<a href={project.href} target='_blank'>
-									Website
-								</a>
+								<div className={styles.warning}>
+									{!project.mobile && '*does not have a mobile version!'}
+								</div>
+								<div className={styles.buttons}>
+									<a href={project.github} target='_blank'>
+										GitHub
+									</a>
+									{project.href.length > 0 && (
+										<a href={project.href} target='_blank'>
+											Website
+										</a>
+									)}
+								</div>
 							</div>
 						</div>
 					</div>

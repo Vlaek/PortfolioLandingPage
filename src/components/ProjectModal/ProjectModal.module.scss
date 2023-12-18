@@ -87,16 +87,24 @@
 	}
 
 	.bottom {
-		align-self: flex-end;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-		a {
-			margin-left: 20px;
-			color: #000;
-			font-size: 20px;
-			transition: color 0.3s ease;
+		.warning {
+			color: #a71b21;
+		}
 
-			&:hover {
-				color: #818ba4;
+		.buttons {
+			a {
+				margin-left: 20px;
+				color: #000;
+				font-size: 20px;
+				transition: color 0.3s ease;
+
+				&:hover {
+					color: #818ba4;
+				}
 			}
 		}
 	}
