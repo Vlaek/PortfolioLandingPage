@@ -211,6 +211,10 @@
 			a {
 				font-size: 16px;
 			}
+
+			.warning {
+				font-size: 12px;
+			}
 		}
 	}
 
@@ -264,6 +268,15 @@
 			.text {
 				max-height: none;
 				display: inline-block;
+			}
+		}
+
+		.bottom {
+			flex-direction: column-reverse;
+
+			.warning {
+				font-size: 14px;
+				margin-top: 10px;
 			}
 		}
 	}
