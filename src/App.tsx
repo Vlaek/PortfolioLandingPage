@@ -4,13 +4,13 @@ import Header from './components/Header/Header'
 import Section from './components/Section'
 import Skill from './components/Skill/Skill'
 import Project from './components/Project/Project'
-import Card from './components/About/About'
 import Footer from './components/Footer/Footer'
-import { skills, projects, about } from './data'
+import { skills, projects } from './data/data'
 import ProjectModal from './components/ProjectModal/ProjectModal'
 import { IProject } from './components/Project/project.interface'
 import SkillModal from './components/SkillModal/SkillModal'
 import { ISkill } from './components/Skill/skill.interface'
+import ExperienceSection from './components/ExperienceSection/ExperienceSection'
 
 const App: FC = () => {
 	const [projectModalIsOpen, setProjectModalIsOpen] = useState<boolean>(false)
@@ -43,9 +43,7 @@ const App: FC = () => {
 				))}
 			</Section>
 			<Section id={'about'} title={'About Me'} color={'#818ba4'}>
-				{about.map((item, index) => (
-					<Card key={index} data={item} />
-				))}
+        <ExperienceSection />
 			</Section>
 			<Footer />
 			<ProjectModal

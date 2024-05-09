@@ -1,0 +1,42 @@
+.item {
+  color: #000;
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &__item {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      user-select: none;
+    }
+  }
+
+  &__company {
+    font-size: 14px;
+    color: #000;
+  }
+
+  &__list {
+    color: #000;
+    margin: 10px 0;
+    margin-left: 20px;
+    list-style: disc;
+    line-height: 1.5;
+
+    &__item {
+      color: #000;
+      margin-top: 5px;
+    }
+  }
+}
