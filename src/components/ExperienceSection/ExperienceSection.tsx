@@ -9,7 +9,6 @@ const ExperienceSection: FC = () => {
     {experiences.map(item => (
       <VerticalTimelineElement 
         key={item.title} 
-        date={item.date}
         icon={
           <div className={styles.item__img}>
             <img
@@ -32,12 +31,15 @@ const ExperienceSection: FC = () => {
         <div className={styles.item}>
           <h3 className={styles.item__title}>{item.title}</h3>
           <p className={styles.item__company}>{item.companyName}</p>
+          <ul className={styles.item__list}>
+            {item.tasks.map((task, index) => (
+              <li className={styles.item__list__item} key={index}>{task}</li>
+            ))}
+          </ul>
+          <div className={styles.item__date}>
+            {item.date}
+          </div>
         </div>
-        <ul className={styles.item__list}>
-          {item.tasks.map((task, index) => (
-            <li className={styles.item__list__item} key={index}>{task}</li>
-          ))}
-        </ul>
       </VerticalTimelineElement>
     ))}
    </VerticalTimeline>

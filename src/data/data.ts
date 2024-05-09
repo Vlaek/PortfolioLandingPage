@@ -389,7 +389,7 @@ export const experiences = [
     img: 'react-icon.png',
     imgBg: '#80aae3',
     companyName: 'The Central Bank of Russian Federation',
-    date: 'February 2024 - Until now',
+    date: 'February 2024 - Present',
     tasks: [
       'Development of new functionality',
       'Updating the system to the new API',
