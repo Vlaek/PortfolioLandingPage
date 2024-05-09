@@ -8,6 +8,7 @@
 - React Icons
 - React Intersection Observer
 - React Scroll
+- React Vertical Timeline Component
 - gh-pages
 
 # Иллюстрации
