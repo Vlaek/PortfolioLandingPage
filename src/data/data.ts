@@ -53,6 +53,10 @@ export const skills = [
 		],
 	},
 	{
+		title: 'Angular',
+    type: ['Frontend'],
+	},
+	{
 		title: 'Redux',
     type: ['Frontend'],
 		extra: ['Redux Saga', 'Redux ToolKit', 'RTK Query'],
@@ -282,6 +286,19 @@ export const projects = [
 			'https://i.imgur.com/N1P3Ayx.gif',
 		],
 		mobile: true,
+	},
+	{
+		title: 'AngularTestProject',
+		img: 'project13.png',
+		href: 'https://vlaek.github.io/AngularTestProject/',
+		subtitle: 'Angular, TypeScript',
+		text: 'This is my first Angular test project.',
+		github: 'https://github.com/Vlaek/AngularTestProject',
+		techs: [
+			'HTML, SCSS, TypeScript, Angular',
+		],
+		screens: [],
+		mobile: false,
 	},
 	{
 		title: 'ToDo Flask',
