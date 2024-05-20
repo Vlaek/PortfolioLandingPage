@@ -8,6 +8,14 @@ export const skills = [
     type: ['Frontend'],
 	},
 	{
+		title: 'SCSS',
+    type: ['Frontend'],
+	},
+	{
+		title: 'LESS',
+    type: ['Frontend'],
+	},
+	{
 		title: 'JavaScript',
     type: ['Frontend'],
 		extra: [
@@ -21,10 +29,11 @@ export const skills = [
 			'Lodash',
 			'Jest',
 			'ThreeJS',
+      'bem-cn'
 		],
 	},
 	{
-		title: 'SCSS',
+		title: 'TypeScript',
     type: ['Frontend'],
 	},
 	{
@@ -62,10 +71,6 @@ export const skills = [
 		extra: ['Redux Saga', 'Redux ToolKit', 'RTK Query'],
 	},
 	{
-		title: 'TypeScript',
-    type: ['Frontend'],
-	},
-	{
 		title: 'Python',
     type: ['Backend'],
 		extra: ['Keras', 'Matplotlib', 'NumPy', 'Pandas'],
@@ -76,6 +81,7 @@ export const skills = [
 	},
 	{
 		title: 'Git',
+    extra: ['GitHub', 'GitLab', 'git flow'],
 	},
 	{
 		title: 'SQL',
