@@ -186,9 +186,7 @@ export const projects = [
     subtitle: 'React, RTK Query, TypeScript',
     text: `A pet project on Next.js for an IT company's website is a web application developed using the Next.js framework. It is designed to present information about the company, its services, projects, frequently asked questions, and contact details.
 
-    Users can visit various pages of the website, such as "About Us," "Services," "Projects," "FAQ," and "Contact." Each page presents relevant information and functionality. For example, on the "Services" page, users can explore the listed services, and on the "Contact" page, there is a form to get in touch with the company.
-
-    The pet project can also include additional features such as the ability to switch between dark and light themes, animations, multilingual support, and form validation. This helps create a more interactive and engaging user interface. The pet project can be deployed on hosting to make it available online.`,
+    Users can visit various pages of the website, such as "About Us," "Services," "Projects," "FAQ," and "Contact."`,
     github: 'https://github.com/Vlaek/DevSolutions',
     techs: [
       'HTML, SCSS Modules, TypeScript',
@@ -205,6 +203,17 @@ export const projects = [
       'https://media.giphy.com/media/0atqeEoD7hGMiM74xU/giphy.gif',
       'https://media.giphy.com/media/Za5h9KzSEx3FAOZRGN/giphy.gif',
     ],
+    mobile: false,
+  },
+  {
+    title: 'BattleSea',
+    img: 'project15.png',
+    href: 'https://vlaek.github.io/BattleSeaReact/',
+    subtitle: 'React, Zustand, TypeScript',
+    text: '"BattleSea" is a pet project that recreates the classic game "Battleship." Users can play against a computer bot, strategically placing their ships on the game board and taking shots at the opponent\'s grid to locate and sink all their ships. The project is built using React for the user interface and Zustand for state management, providing an efficient way to store and update game data.',
+    github: 'https://github.com/Vlaek/BattleSeaReact',
+    techs: ['HTML, CSS, SASS, JavaScript, React, TypeScript', 'Zustand'],
+    screens: ['https://i.imgur.com/0nVIbXh.png'],
     mobile: false,
   },
   {
