@@ -498,11 +498,11 @@ export const experiences = [
     ],
   },
   {
-    title: 'Junior Frontend Developer',
+    title: 'Frontend Developer',
     img: 'react-icon.png',
     imgBg: '#80aae3',
     companyName: 'The Central Bank of Russian Federation',
-    date: 'February 2024 - July 2024',
+    date: 'May 2022 - July 2024',
     tasks: [
       'Developing a user interface for a React web application using Redux for state management',
       'Development of new functionality',
@@ -514,7 +514,7 @@ export const experiences = [
     ],
   },
   {
-    title: 'Junior Fullstack Developer',
+    title: 'Fullstack Developer',
     img: 'spring-icon.png',
     imgBg: '#70b43c',
     companyName: 'The Central Bank of Russian Federation',
