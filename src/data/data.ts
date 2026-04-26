@@ -1,14 +1,11 @@
-import { IProject } from '../components/Project/project.interface'
+import { IProject, ProjectCategory } from '../components/Project/project.interface'
+import { ISkillGroup } from '../components/Skill/skill.interface'
 
 export const skills = [
   {
-    title: 'HTML',
+    title: 'SASS',
     type: ['Frontend'],
-  },
-  {
-    title: 'CSS',
-    type: ['Frontend'],
-    extra: ['CSS Modules', 'SCSS', 'LESS', 'Styled Components', 'TailwindCSS'],
+    extra: ['SCSS Modules', 'CSS Modules', 'LESS', 'Styled Components', 'TailwindCSS'],
   },
   {
     title: 'JavaScript',
@@ -102,6 +99,31 @@ export const skills = [
   },
 ]
 
+export const projectFilters: ProjectCategory[] = ['All', 'Frontend', 'Fullstack', 'Backend', '3D', 'UI']
+
+export const skillGroups: ISkillGroup[] = [
+  {
+    title: 'Frontend Core',
+    description: 'Interfaces, state, routing, forms, and production React flows.',
+    items: ['SASS', 'JavaScript', 'React', 'TypeScript', 'Next.js', 'Redux', 'Zustand'],
+  },
+  {
+    title: 'UI Systems',
+    description: 'Design systems, animations, charts, and responsive interfaces.',
+    items: ['SCSS Modules', 'TailwindCSS', 'Ant Design', 'React Icons', 'ThreeJS', 'Plotly.js'],
+  },
+  {
+    title: 'Backend',
+    description: 'Services, APIs, databases, and enterprise integrations.',
+    items: ['Java', 'Spring Boot', 'Hibernate', 'Python', 'Flask', 'SQL'],
+  },
+  {
+    title: 'Workflow',
+    description: 'Delivery habits and tools for team development.',
+    items: ['Git', 'GitHub', 'GitLab', 'Code Review', 'Swagger', 'Mentoring'],
+  },
+]
+
 export const projects: IProject[] = [
   {
     title: 'Music Store',
@@ -111,7 +133,12 @@ export const projects: IProject[] = [
     text: 'The Music Store is a web application developed using React that provides users with the ability to view and buy music albums. The project was created as an educational and practical task to demonstrate frontend development skills using React and related technologies.',
     github: 'https://github.com/Vlaek/MusicStore-React',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'React Router',
       'React Icons',
       'React Yandex Maps',
@@ -138,6 +165,9 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/Nv6SLAqH2vA95kSIIZ/giphy.gif',
     ],
     mobile: true,
+    category: 'Frontend',
+    featured: true,
+    accent: '#22d3ee',
   },
   {
     title: 'Soundboard',
@@ -147,7 +177,12 @@ export const projects: IProject[] = [
     text: 'Soundboard is a web application developed using React that allows users to listen to tracks. The project was created as an educational and practical task to demonstrate frontend development skills using React and related technologies.',
     github: 'https://github.com/Vlaek/Soundboard-React',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'React Icons',
       'React Select',
       'React Transition Group',
@@ -160,6 +195,9 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/SHdYpqWAZa0kSAZxqo/giphy.gif',
     ],
     mobile: true,
+    category: 'Frontend',
+    featured: true,
+    accent: '#10b981',
   },
   {
     title: 'CookBookHub',
@@ -169,7 +207,12 @@ export const projects: IProject[] = [
     text: 'CookBookHub is a React application that allows users to browse, create, edit, and delete recipes. Users can also add recipes to their favorites list. All of these actions are implemented using RTK Query, and the server is powered by json-server.',
     github: 'https://github.com/Vlaek/CookBookHub',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'React Router Dom',
       'React Icons',
       'SCSS Modules',
@@ -184,6 +227,9 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/WPnpjJJOWxP5srkyjp/giphy.gif',
     ],
     mobile: true,
+    category: 'Fullstack',
+    featured: true,
+    accent: '#f4b740',
   },
   {
     title: 'DevSolution',
@@ -195,7 +241,9 @@ export const projects: IProject[] = [
     Users can visit various pages of the website, such as "About Us," "Services," "Projects," "FAQ," and "Contact."`,
     github: 'https://github.com/Vlaek/DevSolutions',
     techs: [
-      'HTML, SCSS Modules, TypeScript',
+      'HTML',
+      'SCSS Modules',
+      'TypeScript',
       'Next.js 14',
       'i18next',
       'React Icons',
@@ -210,6 +258,9 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/Za5h9KzSEx3FAOZRGN/giphy.gif',
     ],
     mobile: false,
+    category: 'UI',
+    featured: true,
+    accent: '#8b5cf6',
   },
   {
     title: 'BattleSea',
@@ -218,19 +269,26 @@ export const projects: IProject[] = [
     subtitle: 'React, Zustand, TypeScript',
     text: '"BattleSea" is a pet project that recreates the classic game "Battleship." Users can play against a computer bot, strategically placing their ships on the game board and taking shots at the opponent\'s grid to locate and sink all their ships. The project is built using React for the user interface and Zustand for state management, providing an efficient way to store and update game data.',
     github: 'https://github.com/Vlaek/BattleSeaReact',
-    techs: ['HTML, CSS, SASS, JavaScript, React, TypeScript', 'Zustand'],
+    techs: ['HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'TypeScript', 'Zustand'],
     screens: ['https://i.imgur.com/0nVIbXh.png'],
     mobile: false,
+    category: 'Frontend',
+    featured: true,
+    accent: '#ef4444',
   },
   {
     title: 'GitHubChecker',
     img: 'project18.png',
     href: '',
     subtitle: 'React, MaterialUI, GraphQL',
-    text: 'test project',
+    text: 'GitHubChecker is a React application for checking GitHub data through a GraphQL-driven interface. The project focuses on API integration, Material UI composition, and typed state management.',
     github: 'https://github.com/Vlaek/GitHubChecker',
     techs: [
-      'HTML, SCSS, CSS Modules, TypeScript, React',
+      'HTML',
+      'SCSS',
+      'CSS Modules',
+      'TypeScript',
+      'React',
       'GraphQL',
       'MaterialUI',
       'Axios',
@@ -239,27 +297,33 @@ export const projects: IProject[] = [
     ],
     screens: ['https://i.imgur.com/jKKsfty.png'],
     mobile: true,
+    category: 'Frontend',
+    accent: '#22d3ee',
   },
   {
     title: 'ToDoApp',
     img: 'project16.png',
     href: '',
     subtitle: 'Java, Spring Boot, Kotlin',
-    text: 'test project',
+    text: 'ToDoApp is a fullstack task management project built with Spring Boot and Kotlin. It demonstrates backend endpoint design, persistence with H2, and a practical task workflow.',
     github: 'https://github.com/Vlaek/ToDoApp',
     techs: ['Java', 'Spring Boot', 'Kotlin', 'H2'],
     screens: ['https://i.imgur.com/u5XDvuI.png', 'https://i.imgur.com/9uNB28w.png'],
     mobile: true,
+    category: 'Backend',
+    accent: '#10b981',
   },
   {
     title: 'ToDoZustand',
     img: 'project17.png',
     href: '',
     subtitle: 'React, Zustand, Ant Design',
-    text: 'test project',
+    text: 'ToDoZustand is a React task manager built around Zustand and Ant Design. It focuses on clean state management, typed UI flows, and scalable list interactions.',
     github: 'https://github.com/Vlaek/ToDoZustand',
     techs: [
-      'HTML, TypeScript, React',
+      'HTML',
+      'TypeScript',
+      'React',
       'Styled Components',
       'Zustand',
       'Jest',
@@ -269,6 +333,8 @@ export const projects: IProject[] = [
     ],
     screens: ['https://i.imgur.com/RJY5owl.png', 'https://i.imgur.com/2yZBXUm.png'],
     mobile: true,
+    category: 'Frontend',
+    accent: '#8b5cf6',
   },
   {
     title: 'GKeep-Lite',
@@ -278,7 +344,12 @@ export const projects: IProject[] = [
     text: 'GKeep-Lite-React is a simple web application developed on React that allows you to create notes, edit, delete, move and change their color. Users can easily organize their notes by choosing a color that matches their mood or the content of the note. In addition, users can use the search function to quickly find the desired note. GKeep-Lite-React is a simple and user-friendly application for those who want to quickly create notes and organize their thoughts.',
     github: 'https://github.com/Vlaek/GKeep-Lite-React',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'React Icons',
       'React Masonry',
       'React Responsive',
@@ -287,6 +358,8 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTNraHl4cWwxMnkyMGVqajg1cGwzNjg2Z20yN2w0OTVtMGM0OTF3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RxjxcMngnaqbVZcp6h/giphy.gif',
     ],
     mobile: true,
+    category: 'Frontend',
+    accent: '#f4b740',
   },
   {
     title: 'Worms3D',
@@ -296,7 +369,12 @@ export const projects: IProject[] = [
     text: 'The pet project is a 3D model gallery built with React, where users can interact with the models by rotating them and changing the background. The project was created for the purpose of practicing the Three.js library. Users can explore different 3D models and manipulate them in a virtual environment, providing an interactive and engaging experience. This project serves as a learning opportunity for implementing Three.js in a React application and showcasing 3D modeling capabilities.',
     github: 'https://github.com/Vlaek/Worms3D-React',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'ThreeJS',
       'React Three',
       'React Icons',
@@ -307,6 +385,9 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/oi0DIQJXCiQZczZliJ/giphy.gif',
     ],
     mobile: true,
+    category: '3D',
+    featured: true,
+    accent: '#22d3ee',
   },
   {
     title: 'SurveyForm',
@@ -316,7 +397,12 @@ export const projects: IProject[] = [
     text: 'SurveyForm is a simple pet project based on a freeCodeCamp assignment. The project is a survey form written in React Hook Form.',
     github: 'https://github.com/Vlaek/SurveyForm-React',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'React Hook Form',
       'React Select',
       'React Icons',
@@ -326,6 +412,8 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTkyc3lsZ3J0N3AyMGp1MGF5NXoxNzhpOTJpNjh0bW43c3dwYmFudCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i1Fgd3scSajMIXdz1z/giphy.gif',
     ],
     mobile: true,
+    category: 'UI',
+    accent: '#10b981',
   },
   {
     title: 'OnlineStore',
@@ -335,7 +423,12 @@ export const projects: IProject[] = [
     text: 'Product Showcase is a web application that represents a showcase of products. It consists of two pages: a page with a list of products and a page with detailed information about the product.',
     github: 'https://github.com/Vlaek/ProductShowcase-React',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'React Icons',
       'React Loading Skeleton',
       'Axios',
@@ -345,6 +438,8 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2Nyb3ducjVncjJ3bmw2ZnhlYzJza3hjZDh6aHdodXdnaGhlNHM0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IuUmK1PYQDBA7FMqqa/giphy.gif',
     ],
     mobile: false,
+    category: 'Frontend',
+    accent: '#f4b740',
   },
   {
     title: 'Ant Design',
@@ -354,7 +449,12 @@ export const projects: IProject[] = [
     text: 'The goal of this project was to practice using ready-made components from Ant Design. Several pages were created, including a ToDo list with the ability to create task descriptions and due dates, an image gallery, an about us page with pagination, a team page, and a page showcasing other projects.',
     github: 'https://github.com/Vlaek/AntDesign',
     techs: [
-      'HTML, CSS, SASS, JavaScript, React, TypeScript',
+      'HTML',
+      'CSS',
+      'SASS',
+      'JavaScript',
+      'React',
+      'TypeScript',
       'Ant Design',
       'React Router',
       'DayJS',
@@ -366,6 +466,8 @@ export const projects: IProject[] = [
       'https://media.giphy.com/media/pRHeuN7Ph6h78s9Q9r/giphy.gif',
     ],
     mobile: false,
+    category: 'UI',
+    accent: '#8b5cf6',
   },
   {
     title: 'ToDo',
@@ -374,7 +476,7 @@ export const projects: IProject[] = [
     subtitle: 'React, TypeScript',
     text: 'ToDo is a pet project developed on the basis of React, and is a simple but effective task management system. It provides the user with a user-friendly interface for creating, viewing and editing a task list. It is also possible to filter and sort tasks.',
     github: 'https://github.com/Vlaek/ToDo-React',
-    techs: ['HTML, CSS, SASS, JavaScript, React, TypeScript', 'React Transition', 'React Icons'],
+    techs: ['HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'TypeScript', 'React Transition', 'React Icons'],
     screens: [
       'https://i.imgur.com/ikk0AHa.gif',
       'https://i.imgur.com/fMjgHoD.gif',
@@ -384,6 +486,8 @@ export const projects: IProject[] = [
       'https://i.imgur.com/N1P3Ayx.gif',
     ],
     mobile: true,
+    category: 'Frontend',
+    accent: '#22d3ee',
   },
   {
     title: 'AngularTestProject',
@@ -392,9 +496,11 @@ export const projects: IProject[] = [
     subtitle: 'Angular, TypeScript',
     text: 'This is my first Angular test project.',
     github: 'https://github.com/Vlaek/AngularTestProject',
-    techs: ['HTML, SCSS, TypeScript, Angular'],
+    techs: ['HTML', 'SCSS', 'TypeScript', 'Angular'],
     screens: [],
     mobile: false,
+    category: 'Frontend',
+    accent: '#ef4444',
   },
   {
     title: 'ToDo Flask',
@@ -403,7 +509,7 @@ export const projects: IProject[] = [
     subtitle: 'Python, Flask, SQLAlchemy',
     text: 'ToDo is a pet project developed using Flask, Python, JS, HTML and CSS, and is a simple but effective task management system. It provides the user with a user-friendly interface for creating, viewing and editing a task list.',
     github: 'https://github.com/Vlaek/ToDo-Flask',
-    techs: ['HTML, CSS, JavaScript', 'Python', 'Flask', 'SQLAlchemy'],
+    techs: ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQLAlchemy'],
     screens: [
       'https://i.imgur.com/HtuciwT.jpg',
       'https://i.imgur.com/xqAsh8w.jpg',
@@ -412,6 +518,8 @@ export const projects: IProject[] = [
       'https://i.imgur.com/YXytaJj.gif',
     ],
     mobile: false,
+    category: 'Backend',
+    accent: '#10b981',
   },
   {
     title: 'DB Flask',
@@ -420,7 +528,7 @@ export const projects: IProject[] = [
     subtitle: 'Python, Flask, PyMySQL',
     text: 'DB is a graphical interface based on the Flask framework for the Project Organizations database. MySQL is used as a database. The PyMySQL module was selected to implement queries in the database.',
     github: 'https://github.com/Vlaek/Project-Organization-Flask',
-    techs: ['HTML, CSS, JavaScript', 'Python', 'Flask', 'PyMySQL'],
+    techs: ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'PyMySQL'],
     screens: [
       'https://i.imgur.com/KvaWXwi.jpg',
       'https://i.imgur.com/olaJWIP.jpg',
@@ -430,6 +538,8 @@ export const projects: IProject[] = [
       'https://i.imgur.com/0EmwMw8.jpg',
     ],
     mobile: false,
+    category: 'Backend',
+    accent: '#f4b740',
   },
   {
     title: 'Donatik',
@@ -447,6 +557,8 @@ export const projects: IProject[] = [
       'https://i.imgur.com/I96z2X8.png',
     ],
     mobile: true,
+    category: 'UI',
+    accent: '#8b5cf6',
   },
 ]
 
@@ -518,7 +630,7 @@ export const experiences = [
     img: 'spring-icon.png',
     imgBg: '#70b43c',
     companyName: 'The Central Bank of Russian Federation',
-    date: 'August 2024 - Present',
+    date: 'August 2024 - June 2025',
     tasks: [
       'Developing a user interface for a React web application using Redux for state management',
       'Development of the backend of the application on Spring Boot',
@@ -527,6 +639,26 @@ export const experiences = [
       'Participating in the code review and maintaining a high coding standard',
       'Participate in team meetings and discussions to share ideas and optimize workflow',
       'Compiling API documentation for Swagger',
+    ],
+  },
+  {
+    title: 'Frontend Developer',
+    img: 'react-icon.png',
+    imgBg: '#80aae3',
+    companyName: 'Bell Integrator',
+    date: 'July 2025 - Present',
+    tasks: [
+      'Frontend developer on an outsourced Novatek project since January 2026, building a new internal product for employees',
+      'Participating in planning and cross-review with other frontend developers',
+      'Frontend developer on a SberBusiness project from June 2025 to January 2026, building a new product for clients and employees of the platform',
+      'Developed and integrated three micro-frontend applications into existing banking systems, taking them from MVP templates to production release',
+      'Implemented financial dashboards with interactive charts using Recharts and custom SVG patterns',
+      'Configured nginx proxies for local integration with adjacent systems and handled builds and deployments to multiple environments using Jenkins and DPM',
+      'Created an Express mock server, prepared Groovy mock data, and documented business scenarios in Confluence for release demos',
+      'Maintained and published shared npm packages used across the SberBusiness platform',
+      'Consulted developers from the tribe on integration with a new channel and participated in sprint planning, requirement analysis, task decomposition, and cross-project reviews',
+      'Stack: JavaScript, TypeScript, React, Zustand, TanStack Query, Shadcn UI, Zod, React Flow, React Hook Form, Tailwind CSS, Yjs, Turborepo, Vite, Redux Toolkit, Node.js, Express, Module Federation, Webpack, Rsbuild, Less, Recharts, REST API',
+      'Infrastructure: GitLab, Bitbucket, Jenkins, Jira, Confluence',
     ],
   },
 ]

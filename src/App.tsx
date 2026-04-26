@@ -1,22 +1,27 @@
-import { FC, useState } from 'react'
-import Nav from './components/Nav/Nav'
-import Header from './components/Header/Header'
-import Section from './components/Section'
-import Skill from './components/Skill/Skill'
-import Project from './components/Project/Project'
-import Footer from './components/Footer/Footer'
-import { skills, projects } from './data/data'
-import ProjectModal from './components/ProjectModal/ProjectModal'
-import { IProject } from './components/Project/project.interface'
-import SkillModal from './components/SkillModal/SkillModal'
-import { ISkill } from './components/Skill/skill.interface'
+import { FC, useMemo, useState } from 'react'
 import ExperienceSection from './components/ExperienceSection/ExperienceSection'
+import Footer from './components/Footer/Footer'
+import Hero from './components/Hero/Hero'
+import Nav from './components/Nav/Nav'
+import { IProject, ProjectCategory } from './components/Project/project.interface'
+import ProjectModal from './components/ProjectModal/ProjectModal'
+import ProjectsSection from './components/ProjectsSection/ProjectsSection'
+import { ISkill } from './components/Skill/skill.interface'
+import SkillModal from './components/SkillModal/SkillModal'
+import SkillsSection from './components/SkillsSection/SkillsSection'
+import { projects } from './data/data'
 
 const App: FC = () => {
-  const [projectModalIsOpen, setProjectModalIsOpen] = useState<boolean>(false)
-  const [skillModalIsOpen, setSkillModalIsOpen] = useState<boolean>(false)
+  const [projectModalIsOpen, setProjectModalIsOpen] = useState(false)
+  const [skillModalIsOpen, setSkillModalIsOpen] = useState(false)
   const [project, setProject] = useState<IProject | null>(null)
   const [skill, setSkill] = useState<ISkill | null>(null)
+  const [activeFilter, setActiveFilter] = useState<ProjectCategory>('All')
+
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'All') return projects
+    return projects.filter((item) => item.category === activeFilter)
+  }, [activeFilter])
 
   function openProjectModal(newProject: IProject) {
     setProjectModalIsOpen(true)
@@ -24,6 +29,7 @@ const App: FC = () => {
   }
 
   function openSkillModal(newSkill: ISkill) {
+    if (!newSkill.extra) return
     setSkillModalIsOpen(true)
     setSkill(newSkill)
   }
@@ -31,31 +37,24 @@ const App: FC = () => {
   return (
     <>
       <Nav />
-      <Header />
-      <Section id={'skills'} title={'These Are My Skills'} color={'#818ba4'}>
-        {skills.map((item, index) => (
-          <Skill key={index} data={item} openModal={openSkillModal} />
-        ))}
-      </Section>
-      <Section id={'works'} title={'These Are My Projects'} color={'#333'}>
-        {projects.map((item, index) => (
-          <Project key={index} project={item} openModal={openProjectModal} />
-        ))}
-      </Section>
-      <Section id={'about'} title={'About Me'} color={'#818ba4'}>
+      <main>
+        <Hero />
+        <SkillsSection openModal={openSkillModal} />
+        <ProjectsSection
+          projects={filteredProjects}
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+          openModal={openProjectModal}
+        />
         <ExperienceSection />
-      </Section>
+      </main>
       <Footer />
       <ProjectModal
         project={project}
         modalIsOpen={projectModalIsOpen}
         setModalIsOpen={setProjectModalIsOpen}
       />
-      <SkillModal
-        skill={skill}
-        modalIsOpen={skillModalIsOpen}
-        setModalIsOpen={setSkillModalIsOpen}
-      />
+      <SkillModal skill={skill} modalIsOpen={skillModalIsOpen} setModalIsOpen={setSkillModalIsOpen} />
     </>
   )
 }

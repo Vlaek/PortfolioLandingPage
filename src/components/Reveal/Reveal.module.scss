@@ -1,0 +1,21 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 620ms ease,
+    transform 620ms ease;
+  will-change: opacity, transform;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

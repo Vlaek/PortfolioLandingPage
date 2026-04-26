@@ -1,40 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import-normalize;
 
-body {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	color: #fff;
+:root {
+  --bg: #080d12;
+  --bg-soft: #0d141c;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #f8fafc;
+  --muted: #9aa8b8;
+  --muted-strong: #cbd5e1;
+  --accent: #10b981;
+  --accent-2: #f4b740;
+  --accent-3: #22d3ee;
+  --danger: #ef4444;
+  --radius: 8px;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(16, 185, 129, 0.18), transparent 28rem),
+    radial-gradient(circle at 85% 8%, rgba(244, 183, 64, 0.14), transparent 28rem),
+    linear-gradient(180deg, #080d12 0%, #0a1118 45%, #080d12 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-3);
+  outline-offset: 4px;
 }
 
 ul {
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar {
-	width: 8px;
-	background-color: #333;
+  width: 10px;
+  background-color: #080d12;
 }
+
 ::-webkit-scrollbar-thumb {
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: #3e8fa0;
-}
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: #333;
+  border: 2px solid #080d12;
+  border-radius: 999px;
+  background-color: rgba(34, 211, 238, 0.55);
 }
 
 .ReactModal__Overlay {
-	opacity: 0;
-	transition: all 500ms ease-in-out;
+  opacity: 0;
+  transition: opacity 240ms ease;
 }
 
 .ReactModal__Overlay--after-open {
-	opacity: 1;
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  opacity: 0;
+  transform: translateY(22px) scale(0.98);
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .ReactModal__Content {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

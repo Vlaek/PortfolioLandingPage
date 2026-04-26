@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react'
-import { RxCross1 } from 'react-icons/rx'
+import { FiX } from 'react-icons/fi'
 import Modal from 'react-modal'
 import { ISkill } from '../Skill/skill.interface'
 import styles from './SkillModal.module.scss'
@@ -13,40 +13,38 @@ interface SkillModalProps {
 Modal.setAppElement('#root')
 
 const SkillModal: FC<SkillModalProps> = ({ skill, modalIsOpen, setModalIsOpen }) => {
-  const closeModal = () => {
-    setTimeout(() => setModalIsOpen(false), 500)
-    const overlay = document.querySelector('.ReactModal__Overlay') as HTMLElement
-    overlay.style.opacity = '0'
-  }
+  const closeModal = () => setModalIsOpen(false)
 
   useEffect(() => {
-    if (!modalIsOpen) document.body.style.overflow = 'visible'
-    else document.body.style.overflow = 'hidden'
+    document.body.style.overflow = modalIsOpen ? 'hidden' : 'visible'
+    return () => {
+      document.body.style.overflow = 'visible'
+    }
   }, [modalIsOpen])
 
-  if (!skill) {
-    return null
-  }
+  if (!skill) return null
 
   return (
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      contentLabel='Example Modal'
+      closeTimeoutMS={240}
+      contentLabel={`${skill.title} related tools`}
       overlayClassName={styles.overlay}
       className={styles.modal}
     >
-      <div className={styles.container}>
-        <div className={styles.header}>{skill.title}</div>
-        <div className={styles.main}>
-          <ul>
-            {skill.extra?.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <div className={styles.separator}></div>
+      <div className={styles.header}>
+        <div>
+          <span>&lt;{skill.title} /&gt;</span>
         </div>
-        <RxCross1 className={styles.cross} onClick={closeModal} />
+        <button type='button' onClick={closeModal} aria-label='Close skill details'>
+          <FiX aria-hidden='true' />
+        </button>
+      </div>
+      <div className={styles.list}>
+        {skill.extra?.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
       </div>
     </Modal>
   )

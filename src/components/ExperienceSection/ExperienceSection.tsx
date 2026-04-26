@@ -1,53 +1,51 @@
-import { FC } from 'react'
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
-import 'react-vertical-timeline-component/style.min.css'
-import styles from './ExperienceSection.module.scss'
+import { CSSProperties, FC } from 'react'
+import { FiBriefcase, FiCalendar } from 'react-icons/fi'
 import { experiences } from '../../data/data'
+import Reveal from '../Reveal/Reveal'
+import styles from './ExperienceSection.module.scss'
 
 const ExperienceSection: FC = () => {
+  const orderedExperiences = [...experiences].reverse()
+
   return (
-    <VerticalTimeline>
-      {experiences.map((item) => (
-        <VerticalTimelineElement
-          key={item.title}
-          icon={
-            <div className={styles.item__img}>
-              <img
-                src={`./icons/${item.img}`}
-                alt={item.companyName}
-                className={styles.item__img__item}
-                draggable={false}
-              />
-            </div>
-          }
-          iconStyle={{ background: '#eee' }}
-          contentStyle={{
-            border: '0',
-            borderBottom: '10px',
-            borderStyle: 'solid',
-            borderBottomColor: item.imgBg,
-            boxShadow: 'none',
-          }}
-        >
-          <div className={styles.item}>
-            <h3 className={styles.item__title}>{item.title}</h3>
-            <p className={styles.item__company}>{item.companyName}</p>
-            <ul className={styles.item__list}>
-              {item.tasks.map((task, index) => (
-                <li className={styles.item__list__item} key={index}>
-                  <div
-                    className={styles.item__list__item__marker}
-                    style={{ backgroundColor: item.imgBg }}
-                  ></div>
-                  <div className={styles.item__list__item__text}>{task}</div>
-                </li>
-              ))}
-            </ul>
-            <div className={styles.item__date}>{item.date}</div>
-          </div>
-        </VerticalTimelineElement>
-      ))}
-    </VerticalTimeline>
+    <section className={styles.section} id='about' aria-labelledby='experience-title'>
+      <div className={styles.inner}>
+        <Reveal className={styles.header}>
+          <p className={styles.eyebrow}>Experience feed</p>
+          <h2 id='experience-title'>From frontend craft to fullstack delivery</h2>
+        </Reveal>
+        <div className={styles.feed}>
+          {orderedExperiences.map((item, index) => (
+            <Reveal key={`${item.title}-${item.date}`} delay={Math.min(index * 70, 420)}>
+              <article className={styles.item}>
+                <div className={styles.marker} style={{ '--item-accent': item.imgBg } as CSSProperties}>
+                  <img src={`./icons/${item.img}`} alt='' draggable={false} />
+                </div>
+                <div className={styles.content}>
+                  <div className={styles.meta}>
+                    <span>
+                      <FiCalendar aria-hidden='true' />
+                      {item.date}
+                    </span>
+                    {index === 0 && <strong>Current</strong>}
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p className={styles.company}>
+                    <FiBriefcase aria-hidden='true' />
+                    {item.companyName}
+                  </p>
+                  <ul>
+                    {item.tasks.map((task) => (
+                      <li key={task}>{task}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
